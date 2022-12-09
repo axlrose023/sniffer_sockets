@@ -1,0 +1,221 @@
+<h1 style="font-size: 5rem;; color: cornsilk" align="center">SLOBODA SHARK</h1>
+<div class="accordion" id="accordionPanelsStayOpenExample" style="background-color: floralwhite">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                ETHERNET FRAME
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+             aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                <table class="table"
+                       style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: left; border-collapse: separate; border-spacing: 5px; background: #ECE9E0; color: #656665; border: 16px solid #ECE9E0; border-radius: 20px; ">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Source Mac Address</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Destination Mac Address</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Ethernet Protocol</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Ethernet Data</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="background: #F5D7BF; padding: 10px">{{ src_mac }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ dest_mac }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ eth_proto }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ eth_data|truncatechars:50 }}</td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                IP PACKET
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+             aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+                <table class="table"
+                       style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: left; border-collapse: separate; border-spacing: 5px; background: #ECE9E0; color: #656665; border: 16px solid #ECE9E0; border-radius: 20px;">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Version IHL</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Version</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">IHL</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">TOS</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Total Length</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Packed ID</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flags</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Fragment Offset</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">TTL</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Protocol Number</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Protocol</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Checksum</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Source IP Address</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Dest IP Address</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="background: #F5D7BF; padding: 10px">{{ version_ihl }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ version }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ ihl }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ tos }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ total_length }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ packet_id }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flags }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ fragment_offset }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ ttl }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ protocol_num }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ protocol }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ checksum }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ source_address }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ dest_address }}</td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                TCP PACKET
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+             aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+                <table class="table"
+                       style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: left; border-collapse: separate; border-spacing: 5px; background: #ECE9E0; color: #656665; border: 16px solid #ECE9E0; border-radius: 20px;">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Source Port TCP</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Destination Port_TCP</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Sequence</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Acknowledgement</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flag_urg</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flag_ack</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flag_psh</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flag_rst</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flag_syn</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flag_fin</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="background: #F5D7BF; padding: 10px">{{ src_port_tcp }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ dest_port_tcp }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ sequence }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ acknowledgement }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flag_urg }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flag_ack }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flag_psh }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flag_rst }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flag_syn }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flag_fin }}</td>
+
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFour">
+                UDP PACKET
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+             aria-labelledby="panelsStayOpen-headingFour">
+            <div class="accordion-body">
+                <table class="table"
+                       style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: left; border-collapse: separate; border-spacing: 5px; background: #ECE9E0; color: #656665; border: 16px solid #ECE9E0; border-radius: 20px;">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Source Port UDP</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Destination Port UDP</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Size UDP</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">UDP Data</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="background: #F5D7BF; padding: 10px">{{ src_port_udp }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ dest_port_udp }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ size_udp }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ udp_data }}</td>
+
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFive">
+                ICMP | FLAGS | TOS
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+             aria-labelledby="panelsStayOpen-headingFive">
+            <div class="accordion-body">
+                <table class="table"
+                       style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; text-align: left; border-collapse: separate; border-spacing: 5px; background: #ECE9E0; color: #656665; border: 16px solid #ECE9E0; border-radius: 20px;">
+                    <thead>
+                    <tr>
+                        <th scope="col" style="font-size: 18px; padding: 10px">ICMP Type</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">ICMP Code</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">ICMP Checksum</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">ICMP Data</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">Flags</th>
+                        <th scope="col" style="font-size: 18px; padding: 10px">TOS</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="background: #F5D7BF; padding: 10px">{{ icmp_type }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ icmp_code }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ icmp_checksum }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ icmp_data|truncatechars:25 }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ flags_data }}</td>
+                        <td style="background: #F5D7BF; padding: 10px">{{ tos_data }}</td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
